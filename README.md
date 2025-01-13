@@ -13,3 +13,14 @@ The `.version` file defines which version of the application should be used, if 
 
 The bash script `alphafold_bash_script` is the application and must be renamed and relocated.
 
+## Accessing a Module
+
+To use a module, first add the following line to `~/.bashrc` or to the job submission file:
+```
+module use --append /path/to/this/modulefiles/directory
+```
+Then load the module as usual:
+```
+module load <application_name>
+```
+
