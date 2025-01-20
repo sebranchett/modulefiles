@@ -7,11 +7,13 @@ Also, take a look at existing modules, located here on DelftBlue:
 /apps/generic/modulefiles
 ```
 
-The `.lua` file contains the definition of the module, including where to find the application itself.
+## Files description
 
-The `.version` file defines which version of the application should be used, if none is specified during `module load <application>`.
+In `apps` directory, there is a bash script that can be used to run the application.
 
-The bash script `alphafold_bash_script` is the application and must be renamed and relocated.
+The `.lua` file in the `modulefiles` directory contains the definition of the module, including where to find the application itself.
+
+The `.version` file in the `modulefiles` directory defines the default version of the application.
 
 ## Accessing a Module
 
