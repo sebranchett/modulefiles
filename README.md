@@ -11,7 +11,8 @@ Also, take a look at existing modules, located here on DelftBlue:
 
 In the `apps` directory, there is a bash script that can be used to run the application.
 
-The `.lua` file in the `modulefiles` directory contains the definition of the module, including where to find the application itself.
+The `.lua` file in the `modulefiles` directory contains the definition of the module, including where to find the application (in this case, the bash script).
+To create a new version, add a new `.lua` file in the same directory.
 
 The `.version` file in the `modulefiles` directory defines the default version of the application.
 
