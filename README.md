@@ -9,7 +9,7 @@ Also, take a look at existing modules, located here on DelftBlue:
 
 ## Files description
 
-In `apps` directory, there is a bash script that can be used to run the application.
+In the `apps` directory, there is a bash script that can be used to run the application.
 
 The `.lua` file in the `modulefiles` directory contains the definition of the module, including where to find the application itself.
 

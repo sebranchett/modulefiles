@@ -15,7 +15,7 @@ max_template_date="2022-01-01"
 openmm_cpu_threads=1
 
 # Parse command line arguments
-while getopts ":o:m:f:t:d:g:p:" opt; do
+while getopts ":o:m:f:t:d:g:p:c:" opt; do
     case $opt in
         f) fasta_file="$OPTARG" ;;
         o) output_dir="$OPTARG" ;;
@@ -35,7 +35,6 @@ if [ -z "$output_dir" ] || [ -z "$fasta_file" ]; then
 fi
 
 # Run the command
-cat <<EOF > command.txt
 apptainer run --env TF_FORCE_UNIFIED_MEMORY=1,XLA_PYTHON_CLIENT_MEM_FRACTION=4.0,OPENMM_CPU_THREADS=$openmm_cpu_threads \
     -B $data_dir:/db -B ./cache:/etc -B .:/data -B .:/output /projects/alphafold/alphafold_latest.sif \
     --fasta_paths=/data/$fasta_file \
@@ -52,4 +51,4 @@ apptainer run --env TF_FORCE_UNIFIED_MEMORY=1,XLA_PYTHON_CLIENT_MEM_FRACTION=4.0
     --pdb70_database_path=/db/pdb70/pdb70 \
     --model_preset=$model_name \
     --use_gpu_relax=$use_gpu
-EOF
+
