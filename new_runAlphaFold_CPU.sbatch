@@ -9,8 +9,7 @@
 #SBATCH --mem=50G
 #SBATCH --mail-type=ALL
 
-module use --append /scratch/sbranchett/alphafold/.modulefiles
-# module use --append /projects/alphafold/modulefiles  # this line of text can be moved to users' ~/.bashrc script
+module use --append /projects/alphafold/modulefiles  # this line of text can be moved to users' ~/.bashrc script
 
 module load alphafold
 
